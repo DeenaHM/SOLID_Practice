@@ -1,5 +1,5 @@
-﻿namespace SOLID_Practice.Models;
-internal class Course
+﻿namespace SOLID_Practice.Core.Entities;
+public class Course
 {
     public int Id { get; set; }
     public string Code { get; set; }
@@ -13,6 +13,6 @@ internal class Course
     }
 }
 
-    //  Single Responsibility Principle (SRP) 
-    // This ensures that each class focuses on one particular type of data,
-    // in this case, Course information.
+//  Single Responsibility Principle (SRP) 
+// This ensures that each class focuses on one particular type of data,
+// in this case, Course information.

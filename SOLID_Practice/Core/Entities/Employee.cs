@@ -1,15 +1,17 @@
-﻿namespace SOLID_Practice.Models;
-internal class Employee :Person
+﻿using System.Runtime.CompilerServices;
+
+namespace SOLID_Practice.Core.Entities;
+public class Employee : Person
 {
     public string Department { get; set; }
-    public double Salary { get; set; }
-    public Employee(int Id ,string firstName, string lastName, int age, string email,
-                    string department, double salary)
+    private List<PayItem> payItems { get; set; } = new();
+    public Employee(int Id, string firstName, string lastName, int age, string email,
+                    string department)
                   : base(Id, firstName, lastName, age, email)
     {
         Department = department;
-        Salary = salary;
     }
+
 
     // Overridden method Open/Closed Principle
     public override void DisplayInfo()
@@ -17,6 +19,10 @@ internal class Employee :Person
         base.DisplayInfo(); // Call the base class method
         Console.WriteLine($"Employee ID: {Id}");
         Console.WriteLine($"Department: {Department}");
-        Console.WriteLine($"Salary: {Salary:C}");
     }
+    public void AddPayItem(PayItem item)
+    {
+        payItems.Add(item);
+    }
+    
 }

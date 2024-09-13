@@ -1,7 +1,7 @@
-﻿using SOLID_Practice.Models;
+﻿using SOLID_Practice.Core.Entities;
 
-namespace SOLID_Practice.Services.Interfaces;
-internal interface ICourseManager
+namespace SOLID_Practice.Core.Interfaces;
+public interface ICourseManager
 {
     void AddCourse(Course course);
     void RemoveCourse(string courseCode);

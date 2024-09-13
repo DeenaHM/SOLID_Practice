@@ -1,5 +1,5 @@
-﻿using SOLID_Practice.Models;
-using SOLID_Practice.Services.Interfaces;
+﻿using SOLID_Practice.Core.Entities;
+using SOLID_Practice.Core.Interfaces;
 
 public class CourseManager : ICourseManager
 {

@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SOLID_Practice.Models;
-internal class Person
+﻿namespace SOLID_Practice.Core.Entities;
+public class Person
 {
     public int Id { get; set; }
     public string FirstName { get; set; }
@@ -14,7 +8,7 @@ internal class Person
     public string Email { get; set; }
 
     // ctor
-    public Person(int id ,string firstName, string lastName, int age, string email)
+    public Person(int id, string firstName, string lastName, int age, string email)
     {
         FirstName = firstName;
         LastName = lastName;
@@ -32,4 +26,5 @@ internal class Person
     }
 
 }
+
 

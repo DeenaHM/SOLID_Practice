@@ -1,7 +1,7 @@
-﻿using SOLID_Practice.Models;
+﻿using SOLID_Practice.Core.Entities;
 
-namespace SOLID_Practice.Services.Interfaces;
-internal interface IStudentManager
+namespace SOLID_Practice.Core.Interfaces;
+public interface IStudentManager
 {
     void AddStudent(Student student);
     void RemoveStudent(int studentId);

@@ -1,25 +1,27 @@
-﻿using SOLID_Practice.Models;
-using SOLID_Practice.Services.Interfaces;
-namespace SOLID_Practice.Services;
-internal class StudentManager : IStudentManager
+﻿using Microsoft.EntityFrameworkCore;
+using SOLID_Practice.Core.Entities;
+using SOLID_Practice.Core.Interfaces;
+
+namespace SOLID_Practice.Application.Services;
+public class StudentManager : IStudentManager
 {
     private readonly List<Student> _students = new List<Student>();
     private readonly ILogger _logger;
 
-    public StudentManager(ILogger logger)
+      public StudentManager(ILogger logger)
     {
         _logger = logger;
     }
 
-    public List<Student> GetAllStudents()
+    public  List<Student> GetAllStudents()
     {
         _logger.LogInformation("Retrieving all students.");
-        return _students;
+        return  _students;
     }
-    public void AddStudent(Student student)
+    public  void AddStudent(Student student)
     {
 
-       _students.Add(student);
+        _students.Add(student);
         _logger.LogInformation($"Added student: {student.FirstName} {student.LastName}");
 
     }
